@@ -1,0 +1,35 @@
+### get all persons
+GET http://localhost:3001/api/persons
+
+### get info page
+GET http://localhost:3001/info
+
+### get person by id 
+GET http://localhost:3001/api/persons/1
+
+### delete person by id
+DELETE http://localhost:3001/api/persons/1
+
+### add person
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Jenny",
+  "number": "867-5309"
+}
+
+### add person -- missing name error
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "number": "867-5309"
+}
+
+### add person -- missing name and number
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+}
